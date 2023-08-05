@@ -14,7 +14,7 @@ public class Reader {
         String[] bodyArr = new String[lineLength];
         while (scanner.hasNext()) {
             String line = scanner.nextLine();
-            String[] bodyArrTemp = line.split("\\s");
+            String[] bodyArrTemp = line.split("\\s+");
             lineLength = bodyArrTemp.length;
             bodyArr = Arrays.copyOf(bodyArr, bodyArr.length + lineLength);
             for (int i = 0; i < bodyArrTemp.length; i++) {
