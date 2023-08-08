@@ -8,6 +8,7 @@ import java.io.FileNotFoundException;
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
         Task1.test();
+        System.out.println("\n");
         Task2.writeFile();
         Task3.task3();
     }

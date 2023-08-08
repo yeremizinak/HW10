@@ -25,6 +25,7 @@ public class Task1 {
                 Matcher matcher2 = pattern2.matcher(line);
 
                 if (matcher.matches() || matcher2.matches()) {
+                    System.out.println(line);
                     writer.write(line + "\n");
                 }
             }
