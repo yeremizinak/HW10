@@ -1,20 +1,18 @@
 package org.example.task3;
 
 import java.io.FileNotFoundException;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class UniqueArray {
-    public static String[] makeArray() throws FileNotFoundException {
+    public static List<String> uniqueOnly(List<String> reader) throws FileNotFoundException {
         Set<String> uniqueValues = new HashSet<>();
-        for (String val : Reader.readFile()) {
+        List<String> result = new ArrayList<>();
+        for (String val : reader) {
             uniqueValues.add(val);
         }
-        String[] tempArr = new String[uniqueValues.size()];
-        int i = 0;
         for (String val : uniqueValues) {
-            tempArr[i++] = val;
+            result.add(val);
         }
-        return tempArr;
+        return result;
     }
 }
